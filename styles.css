@@ -1,0 +1,211 @@
+/* Tipografía de texto */
+body {
+    font-family: Franklin Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-image: url('https://cdn.wallpapersafari.com/15/33/GJ8e6P.png'); /* Fondo exterior de la pág. */
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+	
+    color: #333;
+}
+
+/*Header y seccion de navegación superior */
+header {
+    background-color: #000; /* COLOR DEL HEADER */
+    color: #ffffff; /* COLOR DEL TITULO ESTRELLA DE LA MUERTE*/
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #E8AF05; /* COLOR BARRA AMARILLA DEL HEADER */
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.header-logo {
+    height: 40px; 
+	width: auto;
+    margin-right: 20px; 
+}
+
+/* titulo estrella de la muerte tamaño */
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+
+nav {
+    background-color: #121212; /*gris*/
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* SEPARACIÓN ENTRE OPCIONES DE SECCIONES */
+}
+
+/* color de texto navegacion: inicio, series, peliculas, personajes*/
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* efecto hover navegacion: inicio, series, peliculas, personajes */
+nav ul li a:hover {
+    color: #ffe81f;
+}
+
+/* (main-wrapper) */
+.main-wrapper {
+    display: flex; /* diseño de dos columnas */
+	flex-direction: row-reverse;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px; /* Espacio entre el sidebar y el contenido */
+}
+
+
+/* Barra Lateral, Sidebar */
+
+.sidebar {
+    width: 25%; /*  25% del ancho de la pagina */
+    padding: 20px;
+    background-color: #fff;
+    border: 4px solid #ccc; /*  borde de la sidebar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    height: fit-content; /*ajustar a la altura del contenido */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 10px; /*  distancia o margen */
+}
+
+.sidebar a {
+    text-decoration: none;
+	font-weight: bold;
+    color: #1a1a1a; /* color del enlace */
+}
+
+.sidebar a:hover {
+    color: #E8AF05;
+}
+
+
+/* Contenido Principal (section.content) */
+.content {
+    width: 75%; /* 75% restante de la página */
+    padding: 20px;
+    background-color: white;
+    border: 4px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.content h2 {
+    font-size: 45px;
+	margin-top: 0;
+	border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* Estilos para las noticias (CONTAINER) */
+.container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+.post {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.footer-col h4 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #E8AF05; /* Amarillo*/
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    color: #E8AF05;
+    text-decoration: none;
+}
+
+/* media query para hacer el diseño responsive  */
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column; /* Apila sidebar y contenido en telefono */
+        gap: 0;
+    }
+    .sidebar, .content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
